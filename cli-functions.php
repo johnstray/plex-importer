@@ -35,7 +35,7 @@ function print_s ( $text, $status ) {
 	$padding = $console_cols - strlen( $text );
 
 	if ( is_integer( $status ) ) {
-    	if ( $status == 0 ) {
+		if ( $status == 0 ) {
 			printf( "{$text}%{$padding}s\n", "[SUCCESS]" );
 		} elseif ( $status == 1 ) {
 			printf( "{$text}%{$padding}s\n", "[FAILED]" );
