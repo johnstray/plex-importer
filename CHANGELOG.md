@@ -1,6 +1,6 @@
 # Changelog for PlexImporter
 
- + v1.3.0
+ + v1.3.0 (10 October 2017)
    - Rewrote filterFilename() function again. This also removed the need for a tag filter.
  + v1.2.0
    - Rewrote the filterFilename function to better handle things.
@@ -33,7 +33,7 @@
  + v1.0.0
    - Initial release
  
- # Changelog for RecursiveImporter
+ # Changelog for RecursiveImport
  + v1.0.0 (15 October 2017)
    - Initial Release
  
