@@ -1,6 +1,6 @@
 <?php 
 /**
- * Plex Importer v3.3.0 - A BitTorrent to Plex Media Server Bridge
+ * Plex Importer v1.3.0 - A BitTorrent to Plex Media Server Bridge
  * Copyright 2014-2017 (c) John Stray - All Rights Reserved
  */
 
@@ -50,9 +50,9 @@ $nameFilter     = array( # Array of changes to make to filename - Processed top 
   'Outsiders.2016'                =>  'Outsiders',                                                  // Outsiders (2016)
   'Time.After.Time.US'            =>  'Time.After.Time.2017',                                       // Time After Time (2017)
   'Part.'                         =>  'S01E',                                                       // *Workaround for Big Little Lies
-  'Guardians.of.the.Galaxy'		    =>  'Marvels.Guardians.of.the.Galaxy',							// Marvel's Guardians of the Galaxy
-  'The.Powerpuff.Girls'			      =>  'The.Powerpuff.Girls.2016',									// The Powerpuff Girls (2016)
-  'Teen.Titans.Go'				        =>  'Teen.Titans.Go!',											// Teen Titans GO!
+  'Guardians.of.the.Galaxy'       =>  'Marvels.Guardians.of.the.Galaxy',                            // Marvel's Guardians of the Galaxy
+  'The.Powerpuff.Girls'           =>  'The.Powerpuff.Girls.2016',                                   // The Powerpuff Girls (2016)
+  'Teen.Titans.Go'                =>  'Teen.Titans.Go!',                                            // Teen Titans GO!
 );
 
 $validLabels    = array( # Array of valid labels expected from BitTorrent
@@ -76,7 +76,7 @@ function main() {
   
   # Print the header
   print_a();
-  print_c("Plex Importer v3.3.0 - A BitTorrent to Plex Media Server Bridge",'center',"\n");
+  print_c("Plex Importer v1.3.0 - A BitTorrent to Plex Media Server Bridge",'center',"\n");
   print_c("Copyright 2014-2017 (c) John Stray - All Rights Reserved",'center',"\n");
   print_a();
   
@@ -790,7 +790,7 @@ function print_version() {
   
 print <<<EOT
   
-    Plex Importer v3.3.0 - A BitTorrent to Plex Media Server Bridge
+    Plex Importer v1.3.0 - A BitTorrent to Plex Media Server Bridge
     Copyright 2014-2017 (c) John Stray - All Rights Reserved
 
     This program is free software: you can redistribute it and/or modify
@@ -814,7 +814,7 @@ function print_help() {
   
 print <<<EOT
   
-Plex Importer v3.3.0 - A BitTorrent to Plex Media Server Bridge
+Plex Importer v1.3.0 - A BitTorrent to Plex Media Server Bridge
 Copyright 2014-2017 (c) John Stray - All Rights Reserved
 
     Required Arguments
