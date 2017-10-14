@@ -544,21 +544,21 @@ function probeCodecs($file) {
  * ConvertCopy
  * Remux or Convert (as required) the streams from the original file to a new MP4 container file
  * Expects the following codec array:
-   $codecsBefore = array(
-     'video' => array(
-       'codec_name' => (string) 'h264',
-       'definition' => (string) '480p',
-       'frame_size' => (string) '720x480'
-     ),
-     'audio' => array(
-       'codec_name' => (string) "aac",
-       'channels' => (int) 2,
-       'bitrate' => (int) 128000
-     ),
-     'subtitle' => array(
-       'codec_name' => (string) 'mov_text'
-     )
-   );
+ * $codecsBefore = array(
+ *   'video' => array(
+ *     'codec_name' => (string) 'h264',
+ *     'definition' => (string) '480p',
+ *     'frame_size' => (string) '720x480'
+ *   ),
+ *   'audio' => array(
+ *     'codec_name' => (string) "aac",
+ *     'channels' => (int) 2,
+ *     'bitrate' => (int) 128000
+ *   ),
+ *   'subtitle' => array(
+ *     'codec_name' => (string) 'mov_text'
+ *   )
+ * );
  */
 function convertCopy($fromFile, $toFile, $codecsBefore) {
   
