@@ -1,8 +1,10 @@
-<?php $cliOptions = getopt( "d:l:vh", array( "directory", "label", "version", "help" ) );
+<?php 
 /**
  * RecursiveImport v1.0 - A script for mass processing of existing media
  * Copyright 2017 (c) John Stray & Joshua Smart - All Rights Reserved
  */
+
+$cliOptions = getopt( "d:l:vh", array( "directory", "label", "version", "help" ) );
 
 # Global Variables
 $enableDebug = TRUE;
@@ -165,11 +167,13 @@ function dumpDebugLog( $logArray ) {
   }
 }
 
+require_once('cli-functions.php');
+
 if ( recursiveImport_main() ) {
-	print("\n\n\n");
+  print("\n\n\n");
   debugLog( "Everything seems to have completed successfully! Exiting...", TRUE );
 } else {
   print("\n\n\n");
-	debugLog("Something seems to have gone wrong! Have a look above for any errors.", TRUE;);
+  debugLog("Something seems to have gone wrong! Have a look above for any errors.", TRUE;);
   passthru( "pause" );
 }
