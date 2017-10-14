@@ -1,8 +1,10 @@
-<?php include('version.php');require("clifunc.php");
+<?php 
 /**
  * Plex Importer v3.3.0 - A BitTorrent to Plex Media Server Bridge
  * Copyright 2014-2017 (c) John Stray - All Rights Reserved
  */
+
+$cliOptions = getopt("d:n:l:vh", array("directory", "name", "label", "version", "help"));
 
 # Setup some variables
 $btSaveDir      = (isset($cliOptions['d'])) ? $cliOptions['d'].DIRECTORY_SEPARATOR : '';  # Directory where Torrent Download is saved
@@ -784,6 +786,52 @@ function dumpDebugLog($logArray) {
   
 }
 
+function print_version() {
+  
+print <<<EOT
+  
+    Plex Importer v3.3.0 - A BitTorrent to Plex Media Server Bridge
+    Copyright 2014-2017 (c) John Stray - All Rights Reserved
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+\n
+EOT;
+
+}
+
+function print_help() {
+  
+print <<<EOT
+  
+Plex Importer v3.3.0 - A BitTorrent to Plex Media Server Bridge
+Copyright 2014-2017 (c) John Stray - All Rights Reserved
+
+    Required Arguments
+    ------------------
+    -d, --directory     Directory where torrent files are saved
+    -n, --name          The name of the torrent or collection of files
+    -l, --label         The torrents label. Used to determine what to do
+
+    Optional Arguments
+    ------------------
+    -v, --version       Information about the version of this program
+    -h, --help          Displays this help message
+\n
+EOT;
+  
+}
+
+require_once('cli-functions.php');
+
 main();
-
-
