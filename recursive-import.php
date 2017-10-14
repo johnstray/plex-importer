@@ -60,7 +60,7 @@ function recursiveImport_main() {
 	# Get the list of directories that we will process
 	print( "\n\n\n" );
   
-  debugLog( "Scanning for directories...", TRUE );
+	debugLog( "Scanning for directories...", TRUE );
 	recursiveSearch( $cliOptions['d'] );
 	$count = count( $arrayOfDirectories );
 	debugLog( "Found ". $count . " directories to process!", TRUE );
