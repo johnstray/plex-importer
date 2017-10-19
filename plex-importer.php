@@ -53,6 +53,7 @@ $nameFilter     = array( # Array of changes to make to filename - Processed top 
   'Guardians.of.the.Galaxy'       =>  'Marvels.Guardians.of.the.Galaxy',                            // Marvel's Guardians of the Galaxy
   'The.Powerpuff.Girls'           =>  'The.Powerpuff.Girls.2016',                                   // The Powerpuff Girls (2016)
   'Teen.Titans.Go'                =>  'Teen.Titans.Go!',                                            // Teen Titans GO!
+  'Castle'                        =>  'Castle.2009',                                                // Castle (2009)
 );
 
 $validLabels    = array( # Array of valid labels expected from BitTorrent
@@ -422,7 +423,7 @@ function filterFilename ($filename) {
 	}
 	
 	# Add some sanity to the string - Deal with dots, dashes, etc.
-	$pathinfo['filename'] = str_ireplace('.',' ',$pathinfo['filename']);
+	$pathinfo['filename'] = str_ireplace(array('.','[',']'),' ',$pathinfo['filename']);
 	$pathinfo['filename'] = ucwords($pathinfo['filename']);
 	
 	if($btTorrentLabel != "Movies") {
